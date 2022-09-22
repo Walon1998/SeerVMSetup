@@ -3,13 +3,13 @@ choco --version
 choco install -y python --version = 3.9.13
 pip install --upgrade pip
 pip install torch --extra-index-url https://download.pytorch.org/whl/cu116
-Copy-Item "./TASystemSettings.ini" -Destination "C:/Users/neville/Documents/My Games/Rocket League/TAGame/Config"
 choco install git
 refreshenv
 pip install legendary-gl
 refreshenv
 legendary auth
 "Y" | legendary install Rocket League
+Copy-Item "./TASystemSettings.ini" -Destination "C:/Users/neville/Documents/My Games/Rocket League/TAGame/Config"
 pip install git+https://github.com/Walon1998/SeerPPO
 git clone https://github.com/Walon1998/SeerWorker
 cd cd SeerWorker
