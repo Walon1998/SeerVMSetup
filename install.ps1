@@ -1,10 +1,10 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 choco --version
 choco install -y python --version = 3.9.13
-pip install --upgrade pip
-pip install torch --extra-index-url https://download.pytorch.org/whl/cu116
 choco install git
 refreshenv
+pip install --upgrade pip
+pip install torch --extra-index-url https://download.pytorch.org/whl/cu116
 pip install legendary-gl
 refreshenv
 legendary auth
