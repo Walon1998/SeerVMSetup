@@ -10,8 +10,10 @@ Copy-Item "./TASystemSettings.ini" -Destination $file -Force
 pip install git+https://github.com/Walon1998/SeerPPO
 git clone https://github.com/Walon1998/SeerWorker
 cd SeerWorker
-wget http://nevillewalo.ch/assets/Replays.zip
-Expand-Archive -DestinationPath ".\Replays" .\Replays.zip
-
-
-
+cd Replays
+$files = "Replays_0.zip", "Replays_1.zip", "Replays_2.zip", "Replays_3.zip", "Replays_4.zip"
+foreach ($f in $files)
+{
+    Expand-Archive -DestinationPath ".\" $f
+}
+cd ..
